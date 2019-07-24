@@ -45,6 +45,11 @@ body {
  height: 55px;
 }
 
+.header-logo img {
+  width: 205px;
+  height: 55px;
+}
+
 .header-top {
   margin-bottom: 125px;
 }
@@ -56,12 +61,16 @@ body {
   margin-left: 125px;
   padding: 0;
   list-style: none;
+  margin-top: 18px;
 }
 
+.main-nav li {
+  float: left;
+  margin-right: 50px;
+}
 
-.btn-quick-order {
-float: right;
-
+.main-nav li:last-child {
+  margin-right: 0px;
 }
 
 .main-nav li {
@@ -82,18 +91,50 @@ float: right;
 }
 
 .btn {
+  width: 146px;
+  word-wrap: break-word;
+  text-align: center;
+  font: inherit;
+  border-radius: 2px;
   color: #a38b70;
   text-decoration: none;
   text-transform: uppercase;
+  display: inline-block;
+  padding: 10px;
+  vertical-align: top;
+  border: 2px solid #a38b70;
 }
 
 .btn:hover {
   color: #8d745a;
+  border-color: #8d745a;
 }
 
 .btn:active {
   color: rgba(141, 116, 90, 0.3);
+  border-color: #8d745a;
 }
+
+.btn-quick-order {
+  float: right;
+  color: white;
+  border-color: white;
+  margin-top: 6px;
+
+}
+
+.btn-quick-order:hover {
+  color:#404040;
+  border-color: white;
+  background-color: white;
+}
+
+.btn-quick-order:active {
+  color: rgba(64, 64, 64, 0.3) ;
+  border-color: white;
+  background-color: white;
+}
+
 
 .promo {
   font-family: "Georgia", serif;
@@ -129,13 +170,46 @@ float: right;
   width: 279px;
   padding-left:30px;
   padding-right:30px;
+  position: relative;
+}
+
+.feature-item p {
+  margin: 0px; 
 }
 
 .feature-item:nth-child(1) {
   border-color: transparent;
 }
 
+.feature-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 137px;
+  width: 65px;
+  height: 65px;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+
+}
+
+
+.feature-choice::before {
+  background-position: -5px -5px;
+}
+
+.feature-quality::before {
+  background-position: -5px -76px;
+}
+
+.feature-safety::before {
+  background-position: 1px -143px;
+}
+
+
 .feature-title {
+  margin: 0px;
+  margin-bottom: 20px;
   font-family: "Georgia", serif;
   font-size: 30px;
   line-height: 30px;
@@ -144,15 +218,15 @@ float: right;
 }
 
 .feature-choice {
-  background: url("../img/feature-1.png") top center no-repeat;
+
 }
 
 .feature-quality {
-  background: url("../img/feature-2.png") top center no-repeat;
+
 }
 
 .feature-safety {
-  background: url("../img/feature-3.png") top center no-repeat;
+
 }
 
 
@@ -170,12 +244,15 @@ float: right;
 }
 
 .cat-reference dd {
+  position: relative;
   margin: 0;
+  padding-left:130px;
+  min-height: 100px;
 }
-
 
 .cat-reference dl {
  width: 820px;
+ margin: 0px;
 }
 
 
@@ -183,6 +260,15 @@ float: right;
   margin-top: 70px;
 }
 
+.cat-reference .container {
+  position: relative;
+}
+
+.to-full-reference {
+ position: absolute;
+ top: 5px;
+ right: 0px;
+}
 
 .section-title {
   font-family: "Georgia", serif;
@@ -190,10 +276,15 @@ float: right;
   line-height: 55px;
   font-weight: bold;
   color: #a38b70;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-bottom: 60px;
+  margin-right: 180px;
 }
 
 .reference-title {
   font-size: 24px;
+  display: inline;
 }
 
 .reference-source {
@@ -201,12 +292,33 @@ float: right;
   font-style: italic;
 }
 
-.cat-reference dd img {
-  border-radius: 5px;
-}
-
 .reference-source a {
   color: #a38b70;
+  position: relative;
+}
+
+
+.reference-source a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -10px;
+  width: 8px;
+  height: 8px;
+  background: url("../img/sprite.png") no-repeat -5px -210px;
+}
+
+.cat-reference dd img {
+  position: absolute;
+  border-radius: 5px;
+  top: 0px;
+  left:0px;
+  width: 100px;
+  height: 100px;
+}
+
+.cat-reference dd p {
+ margin: 0px; 
 }
 
 .reference-source a:hover {
