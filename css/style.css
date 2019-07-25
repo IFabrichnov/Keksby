@@ -352,6 +352,21 @@ body {
   font-style: italic;
 }
 
+.reviews .container {
+ position: relative; 
+}
+.to-all-reviews {
+ position: absolute;
+ top: 0px;
+ right: 0px;
+}
+
+.review-item p {
+ margin: 0px;
+ margin-bottom: 15px;
+}
+
+
 /*Раздел Популярные товары */
 .popular-and-price {
   background-color: #f2f2f2;
@@ -360,8 +375,18 @@ body {
 }
 
 .catalog-item h3 {
-  color: #000000;
+  float: left;
+  max-width: 205px;
+  margin: 0px;
+  margin-bottom: 20px;
   font-size: 16px;
+  color: #000000;
+}
+
+.catalog-item-price {
+  float: right;
+  max-width: 55px;
+  margin-bottom: 20px;
 }
 
 .popular-items {
@@ -369,18 +394,60 @@ body {
 }
 
 .catalog-item {
+  position: relative;
   float: left;
-  width: 308px;
+  width: 262px;
   margin-right: 48px;
+  padding: 15px 22px;
+  padding-top: 221px;
+  border: 1px solid #d8d8d8;
 }
 
 .catalog-item img {
-  max-width: 100%;
-  height: auto;
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ width: 306px;
+ height: 206px;
+ max-width: 100%;
+ height: auto;
 }
 
 .catalog-item:last-child {
   margin-right: 0;
+}
+
+.popular-and-price .container {
+  position: relative;
+}
+
+.to-catalog {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+
+.catalog-item .btn-info {
+  float: left;
+  clear: left;
+}
+
+.catalog-item .btn-buy {
+  float: right;
+}
+
+.catalog-item .btn {
+ width: 101px;
+ background-color: #a38b70;
+ color: white;
+}
+.catalog-item .btn:hover {
+  background-color: #8d745a;
+}
+
+.catalog-item .btn:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 
@@ -409,17 +476,27 @@ body {
 
 .price-list th,
 .price-list td {
-  padding: 5px 10px;
+  padding: 10px 17px;
 }
 
 .price-list .price-number {
   text-align: center;
+  width: 15px;
 }
 
 .price-list .price-name {
   font-weight: bold;
   color: #000000;
+  width: 422px;
 }
+
+.price-list .price-master {
+ width: 306px; 
+}
+.price-list .price-cost {
+ width: 135px; 
+}
+
 
 
 /*Форма отправки*/
